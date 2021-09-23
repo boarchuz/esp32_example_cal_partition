@@ -1,0 +1,3 @@
+nvs,        data,   nvs,        ,   0x6000,
+factory,    app,    factory,    ,   0x100000,
+cal_data,   data,   0xCD,       ,   0x1000,

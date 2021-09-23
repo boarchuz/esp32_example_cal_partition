@@ -1,0 +1,17 @@
+menu "[BO] PHY Calibration Partition"
+
+    config BO_PHYCP_ENABLED
+        bool "Enable"
+        default n
+        help
+            Override default phy calibration with storage/retrieval of calibration data from flash partition.
+
+            Warning: This will enable the linker option for multiple symbol definitions, in order to override default functions.
+
+    config BO_PHYCP_PARTITION_SUBTYPE
+        hex "Partition subtype"
+        depends on BO_PHYCP_ENABLED
+        default 0xCD
+        range 0x06 0xFE
+
+endmenu
